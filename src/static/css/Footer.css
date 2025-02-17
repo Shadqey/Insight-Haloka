@@ -1,0 +1,20 @@
+.footer {
+    position: fixed; /* or position: absolute; */
+    bottom: 0;
+    width: 100%;
+    background-color: #F19820;
+    text-align: center;
+  }
+
+.footer p {
+    text-align: center;
+    color: white;
+    margin: 5px 10px;
+}
+
+.footer span {
+    padding-left: 10px;
+    padding-right: 5px;
+    display: inline-block;
+    vertical-align: bottom;
+}

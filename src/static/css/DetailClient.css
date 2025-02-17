@@ -1,0 +1,19 @@
+.text-center{  
+margin-top: 15%;
+}
+.text-left{
+    text-align: left;
+}
+.text-bio{
+    margin-left: 15%;
+    font-weight: bold;
+}
+.text-header{
+    margin-left: 5%;
+    color: #F19820;
+}
+
+.add-contract {
+    margin-bottom: 1.5rem;
+    margin-left: 3rem;
+}

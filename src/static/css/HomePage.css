@@ -1,0 +1,194 @@
+.content-home {
+    padding-top: 0px;
+    width: 100%;
+}
+
+.h1-welcome {
+    font-size: 2.5rem;
+}
+
+.h1-user {
+    font-size: 5rem;
+}
+
+.welcome {
+    margin: auto;
+    width: 50%;
+    background-color: white;
+    margin-top: 7rem;
+    box-shadow: 1px 1px 20px #666666;
+    border-radius: 50px;
+    padding: 3rem;
+}
+
+p {
+    text-align: justify;
+}
+
+.intro{
+    display: flex;
+    height: 33vh;
+}
+
+.i-center {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.i-left{
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.i-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}  
+
+.i-name>:nth-child(1){
+    color: #F19820;
+    font-weight: bold;
+    font-size: 2.4rem;
+}
+
+.i-name>:nth-child(2){
+    font-weight: 100;
+    font-size: 15px;
+    color: var(--gray);
+    margin-top: 10px;
+}
+
+.i-button{
+    width: 10rem;
+    height: 2rem;
+}
+
+.i-right{
+    flex: 1;
+    position: relative;
+}
+
+.i-right>*{
+    position: absolute;
+    z-index: 1;
+}
+
+.landing-page {
+    height: 98vh;
+    width: 100%;
+    background-color: #F19820;
+    /* background-image: linear-gradient(#F19820, white); */
+    margin: auto;
+}
+
+.gradient-page {
+    height: 95vh;
+    width: 100%;
+    /* background-image: linear-gradient(#F19820, white); */
+    background: white;
+    padding-top: 17vh;
+}
+.img-landpage {
+    padding-left: 70px;
+    margin: auto;
+    filter: drop-shadow(0px 5px 30px gray);
+}
+
+.form-signin {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.card-home {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 0.5px solid #F19820;
+    transition: 0.3s;
+    height: 40vh;
+  }
+  .card-home:hover {
+    border: 3px solid #F19820;
+  }
+  
+  .card-home h3 {
+    font-size: 24px;
+    color: black;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .card-home p {
+    margin-bottom: 70px;
+    text-align: center;
+  }
+
+  .card-home .card-button {
+    display: flex;
+    background: none;
+    color: gray;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 100px; */
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    height: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    /* border: 1px solid white; */
+    font-size: 14px;
+  }
+  .card-home .card-button:hover {
+    color: #F19820;
+    background: white;
+    box-shadow: 1px 1px 3px 0px #666666;
+  }
+
+  @media screen and (max-width: 768px) {
+    .landing-page {
+        width: 100%;
+    }
+
+    .h1-welcome {
+        font-size: 1.5rem;
+    }
+
+    .h1-user {
+        font-size: 3.5rem;
+    }
+
+    .card-home {
+        height: 46vh;
+    }
+
+    .img-landpage {
+        padding-left: 20px;
+    }
+    
+  }
+
+  @media screen and (max-width: 1280px) {
+    .img-landpage {
+        padding-left: 20px;
+        padding-right: 30px;
+    }
+
+  }

@@ -1,0 +1,62 @@
+.heading-h1 {
+  font-family: "aileron", sans-serif;
+  font-weight: bolder;
+  font-style: normal;
+  }
+  
+.subheading-p{
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+  font-family: "aileron", sans-serif;
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+h3, h4, h5 {
+  font-family: "aileron", sans-serif;
+  font-weight: bolder;
+  font-size: medium;
+}
+
+p, strong{
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  font-size: small;
+}
+
+strong {
+  font-weight: 700;
+  font-size: small;
+}
+
+.title{
+  font-family: "aileron", sans-serif;
+  font-weight: bolder;
+  font-size: 2rem;
+  color: black;
+}
+
+td, th {
+  font-family: "aileron", sans-serif;
+  font-size: smaller;
+}
+
+.button {
+  font-family: "aileron", sans-serif;
+}
+
+.link-button {
+  font-family: "aileron", sans-serif;
+}
+
+p {
+  font-family: "aileron", sans-serif;
+}
+
+.attribute {
+  font-size: small;
+}

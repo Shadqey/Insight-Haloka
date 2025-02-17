@@ -1,0 +1,41 @@
+#main-card {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+h2, h4 {
+    text-align: center;
+}
+
+h4.id {
+    font-size: medium;
+}
+
+table.info {
+    margin: 1.5em 0;
+}
+
+table.info, td.info {
+    border: none;
+    padding-right: 1rem;
+}
+
+td {
+    text-align: left;
+}
+
+td.product , td.total{
+    font-weight: 700;
+}
+
+td.price {
+    text-align: right;
+}
+
+td.total {
+    font-size: large;
+}
+
+.is-total {
+    font-weight: 700;
+}

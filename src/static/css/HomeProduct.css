@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background: #f2f5f9;
+    color: #111;
+  }
+  .container {
+    max-width: 1300px;
+    width: 100%;
+    /* margin: auto; */
+    padding: 0 20px;
+  }
+  section {
+    min-height: 83vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section h1 {
+    justify-self: center;
+    margin-bottom: 30px;
+    /* color: #F19820; */
+    line-height: 40px;
+    text-align: center;
+    font-size: 40px;
+  }
+  .link-container {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  .link {
+    color: #111;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 5px 10px;
+    border: 0.5px solid wheat;
+    font-weight: 500;
+  }
+  .link:hover {
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    background-color: #F19820;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .card {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 0.5px solid wheat;
+    transition: 0.3s;
+  }
+  .card:hover {
+    border: 2px solid #F19820;
+  }
+  
+  .card h3 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 20px;
+  }
+  .card .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100px;
+    width: 100%;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    height: 30px;
+    margin-top: 10px;
+    color: #F19820;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid white;
+    font-size: 14px;
+  }
+  .card .btn:hover {
+    color: #F19820;
+    background: white;
+    border: 1px solid transparent;
+    box-shadow: 2px 2px 2px 2px #666666;
+  }
+
+  .link-button, .button {
+    font-size: smaller;
+    /* width: 50%;
+    margin: 0 0.1rem; */
+  }
+  
+  @media (max-width: 969px) {
+    section{
+      padding: 30px 0px;
+    }
+    section h1 {
+      font-size: 40px;
+    }
+    .card {
+      flex: 0 0 calc(50% - 10px);
+      max-width: calc(50% - 10px);
+    }
+  }
+  @media (max-width: 767px) {
+    
+    .card {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+

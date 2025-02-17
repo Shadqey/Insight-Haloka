@@ -1,0 +1,273 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+  <!-- <link rel="stylesheet" href="pdf-invoice-style.css" />
+  <title>PDF Invoice</title> -->
+  <style>
+    @page {
+  size: a4 portrait;
+  margin: 1.5cm 1.5cm 1.5cm 1.5cm;
+}
+  
+  h1, h4, h5 {
+    text-align: center;
+  }
+
+
+  h5 {
+    font-weight: 500;
+    font-size:medium;
+    margin: 0;
+    padding: 0;
+  }
+
+  h4 {
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    font-size:large;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  table.list-product, th.list-product, td.list-product{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0.15cm 0.15cm 0.05cm 0.15cm;
+    font-size: 10px;
+  }
+
+  table.info, td.info {
+    border: none;
+    width: 15%;
+    font-size: 12px;
+  }
+
+  td.sym {
+    width: 5%;
+    text-align: right;
+    padding-right: 0.1cm;
+  }
+
+  table.list-product {
+    width: 100%;
+    margin: auto;
+  }
+  
+  table.signature, th.signature, td.signature, td.name {
+    border: none;
+    text-align: center;
+  }
+
+  td.name {
+    font-weight: 500;
+  }
+
+  table.signature {
+    width: 90%;
+    margin: auto;
+  }
+
+  tr.space-sign {
+    height: 2.5cm;
+  }
+
+  hr.line {
+    margin: 0 auto;
+    padding: 0;
+    width: 60%;
+    border: 5px solid black;
+  }
+
+  td.signature {
+    padding: 0.2cm 1cm 0cm 1cm;
+  }
+
+  ul, li, p {
+    margin: 0;
+    padding-bottom: 0.05cm;
+  }
+  </style>
+</head>
+
+<body>
+  <div style="text-align: center;">
+    <img src='../static/haloka-logo.png' alt="Haloka Logo" style="height: 1cm;">
+  </div>
+  <br><br>
+  <div class="profile">
+    <h5>PT. HALOKA GRUP INDONESIA</h5>
+    <h5>Jl. K.H. Royani 2 No. 20, Jakarta Selatan, 12940</h5>
+    <h5>+6287 7880 05662 | <span><a href="mailto: halokacreative@gmail.com">halokacreative@gmail.com</a></span></h5>
+  </div>
+  <br><br>
+  <div class="code">
+    <h4 class="code">Perjanjian Kerja Sama</h4>
+    <h4 class="code">PT. Haloka Group Indonesia dan {{agreement.client.company_name}}</h4>
+    <h4 class="code">{{agreement.number}}</h4>
+  </div>
+  <br><br>
+  <div class="info">
+    <ul style="padding-left: 0.5cm;">
+        <p>Yang bertanda tangan dibawah ini: </p>
+            <p style="padding-left: 0.8cm;">1. Nama     : Stephanie Regina</p>
+            <p style="padding-left: 0.8cm;">   Jabatan  : Direktur</p>
+            <p style="padding-left: 0.8cm;">   Mewakili : PT. Haloka Group Indonesia</p>
+            <p style="padding-left: 0.8cm;">   Alamat   : Jl. KH Royani 2 No. 20 Jakarta Selatan 12940</p>
+            <p style="padding-left: 0.8cm;">   Selanjutnya disebut sebagai <b>PIHAK PERTAMA</b></p>
+            <p style="padding-left: 0.8cm;">   Bersedia bekerja sama dengan</p>
+    </ul>
+    <br>
+    <ul style="padding-left: 0.5cm;">
+            <p style="padding-left: 0.8cm;">2. Nama     : PIC</p>
+            <p style="padding-left: 0.8cm;">   Jabatan  : PIC</p>
+            <p style="padding-left: 0.8cm;">   Mewakili : {{agreement.client.company_name}}</p>
+            <p style="padding-left: 0.8cm;">   Telepon   : {{agreement.client.phone}}</p>
+            <p style="padding-left: 0.8cm;">   Selanjutnya disebut sebagai <b>PIHAK KEDUA</b></p>
+    </ul>
+    <ul style="padding-left: 0.5cm;">
+        <p>Kesepakatan ditetapkan berdasarkan pasal-pasal yang terdapat dalam Perjanjian Kerja Sama ("perjanjian") ini, dimana <b>PIHAK KEDUA</b> disebut sebagai partner yang mendukung <b>PIHAK PERTAMA</b>.</p>
+</ul>
+  </div>
+  <br><br>
+  <div>
+    <ul style="padding-left: 0.5cm;">
+        <h4 class="code" align="center"><strong>PASAL 1</strong></h4>
+        <h4 class="code" align="center"><strong>TUJUAN DAN OBJEKTIF</strong></h4>
+        <p style="padding-left: 0.5cm;">1.1. Tujuan dari kerjasama ini adalah untuk memberikan keuntungan kepada kedua belah pihak secara seimbang. <b>PIHAK PERTAMA</b> setuju untuk memberikan layanan jasa Branding Consultation: Corporate Branding (4 months) kepada <b>PIHAK KEDUA</b>, dan <b>PIHAK KEDUA</b> bersedia untuk terlibat dalam proyek Branding Consultation sebagaimana telah tertulis di perjanjian ini.</p>
+    </ul>
+    <ul style="padding-left: 0.5cm;">
+        <h4 class="code" align="center"><strong>PASAL 2</strong></h4>
+        <h4 class="code" align="center"><strong>ASAS PERJANJIAN</strong></h4>
+        <p style="padding-left: 0.5cm;">2.1. <b>Perjanjian</b> ini berlandaskan itikad baik, saling percaya, sama derajat, saling menguntungkan, dengan tetap menaati ketentuan dan peraturan yang berlaku, dan selalu berusaha menyelesaikan masalah yang mungkin timbul dengan cara profesional guna mencapai musyawarah untuk mufakat.</p>
+    </ul>
+    <ul style="padding-left: 0.5cm;">
+        <h4 class="code" align="center"><strong>PASAL 3</strong></h4>
+        <h4 class="code" align="center"><strong>MASA BERLAKU</strong></h4>
+        <p style="padding-left: 0.5cm;">3.1. Jangka waktu perjanjian ini adalah 4 (empat) bulan sejak sesi konsultasi branding pertama dimulai dan berakhir pada selesainya pemberian layanan jasa konsultasi branding yang dilaksanakan secara daring selama 4 bulan, dimulai pada 8 Februari 2023 - 8 Juni 2023 (sebagaimana tertulis di periode Program pasal 4.1.).</p>
+        <p style="padding-left: 0.5cm;">3.2. <b>Surat kontrak</b> ini dapat diperpanjang untuk jangka waktu dan syarat-syarat yang disepakati oleh <b>PARA PIHAK</b>.</p>
+        <p style="padding-left: 0.5cm;">3.3. Perpanjangan sebagaimana dimaksud pada ayat (3.2), <b>PIHAK PERTAMA</b> atau <b>PIHAK KEDUA</b> dalam jangka waktu 1 (satu) bulan sebelum masa berakhirnya perjanjian ini harus menyatakan kehendaknya secara tertulis untuk memperpanjang perjanjian ini.</p>
+    </ul>
+    <ul style="padding-left: 0.5cm;">
+        <h4 class="code" align="center"><strong>PASAL 4</strong></h4>
+        <h4 class="code" align="center"><strong>LINGKUP KERJASAMA</strong></h4>
+        <p style="padding-left: 0.5cm;">4.1. Melalui perjanjian ini, PARA PIHAK setuju untuk melakukan kerjasama dengan lingkup:</p>
+        {% for prod in product_all %}
+          <p style="padding-left: 0.5cm;">     Format kerjasama : {{ prod.title }}</p>
+          <p style="padding-left: 0.5cm;">     Lingkup kerja Program : </p>
+        {% endfor %}
+        <p style="padding-left: 0.5cm;">Pelaksanaan Program dilakukan secara daring berdasarkan pada persetujuan <b>PARA PIHAK</b>.</p>
+        <p style="padding-left: 0.5cm;">Periode Program : {{agreement.start_date}} - {{agreement.end_date}}</p>
+    </ul>
+    <ul style="padding-left: 0.5cm;">
+        <h4 class="code" align="center"><strong>PASAL 5</strong></h4>
+        <h4 class="code" align="center"><strong>BIAYA PROGRAM</strong></h4>
+        <p style="padding-left: 0.5cm;">5.1. <b>PIHAK KEDUA</b> setuju untuk membayarkan biaya pelaksanaan pelatihan manajemen kepada <b>PIHAK PERTAMA</b> sebesar Rp {{total_price}}. <b>PIHAK KEDUA</b> wajib melakukan down payment sebesar 20% kepada PIHAK PERTAMA paling lambat 7 hari setelah invoice diterbitkan (1 Februari 2023), 40% berikutnya wajib dibayarkan 60 hari setelah proyek berjalan dan 40% sisanya wajib dibayarkan maksimal 7 hari setelah proyek selesai. Pembayaran dilakukan ke:</p>
+        <p style="padding-left: 0.8cm;">Bank : BCA - KCP Cyber 2</p>
+        <p style="padding-left: 0.8cm;">Account no : 6070581769</p>
+        <p style="padding-left: 0.8cm;">Account name : PT HALOKA GRUP INDONESIA</p>
+    </ul>
+    <ul style="padding-left: 0.5cm;">
+        <h4 class="code" align="center"><strong>PASAL 6</strong></h4>
+        <h4 class="code" align="center"><strong>HAK DAN KEWAJIBAN PARA PIHAK</strong></h4>
+        <p style="padding-left: 0.5cm;">1. Kewajiban <b>PIHAK PERTAMA</b>:</p>
+        <p style="padding-left: 0.8cm;">a. Menyelenggarakan Program sesuai dengan scope of work yang telah disetujui, juga
+            sesuai dengan ketentuan-ketentuan dan syarat-syarat yang disepakati <b>PARA PIHAK</b>
+            dalam Perjanjian ini.</p>
+        <p style="padding-left: 0.8cm;">b. Mengikuti sepenuhnya ketentuan-ketentuan yang diberlakukan oleh <b>PIHAK
+            KEDUA</b>.</p>
+        <br>
+        <p style="padding-left: 0.5cm;">2. Hak <b>PIHAK PERTAMA</b>:</p>
+        <p style="padding-left: 0.8cm;">a. Menerima pembayaran atas pelaksanaan Program.</p>
+        <br>
+        <p style="padding-left: 0.5cm;">3. Kewajiban <b>PIHAK KEDUA</b>:</p>
+        <p style="padding-left: 0.8cm;">a. Melakukan pembayaran biaya Program kepada <b>PIHAK PERTAMA</b>.</p>
+        <p style="padding-left: 0.8cm;">b. Memberikan data yang sekiranya dibutuhkan untuk pelaksanaan program.</p>
+        <br>
+        <p style="padding-left: 0.5cm;">4. Hak <b>PIHAK KEDUA</b>:</p>
+        <p style="padding-left: 0.8cm;">a. Menerima Program yang diselenggarakan oleh <b>PIHAK PERTAMA</b>.</p>
+        <p style="padding-left: 0.8cm;">b. Memberikan <i>feedback</i> atau melakukan <i>review</i> atas pelaksanaan Program setelah Program selesai diselenggarakan.</p>
+    </ul>
+    <ul style="padding-left: 0.5cm;">
+        <h4 class="code" align="center"><strong>PASAL 7</strong></h4>
+        <h4 class="code" align="center"><strong>WANPRESTASI</strong></h4>
+        <p style="padding-left: 0.5cm;">7.1. <b>PARA PIHAK</b> dikatakan melakukan wanprestasi apabila dinyatakan sebagai berikut:</p>
+        <p style="padding-left: 0.8cm;">1. Tidak melaksanakan apa yang sudah diperjanjikan dalam Perjanjian ini;</p>
+        <p style="padding-left: 0.8cm;">2. Melaksanakan yang diperjanjikan, tetapi tidak sebagaimana mestinya;</p>
+        <p style="padding-left: 0.8cm;">3. Melanggar ketentuan yang tertulis dalam Perjanjian ini; dan</p>
+        <p style="padding-left: 0.8cm;">4. Tidak terpenuhinya hak dan kewajiban <b>PARA PIHAK</b>.</p>
+    </ul>
+    <ul style="padding-left: 0.5cm;">
+        <h4 class="code" align="center"><strong>PASAL 8</strong></h4>
+        <h4 class="code" align="center"><strong>KEADAAN MEMAKSA (FORCE MAJEURE)</strong></h4>
+        <p style="padding-left: 0.5cm;">8.1. Dalam perjanjian ini, keadaan memaksa akan merupakan kejadian atau peristiwa diluar kemampuan kedua belah pihak, termasuk-namun tidak terbatas-pada kejadian sebagai berikut; kerusakan peralatan, terputusnya aliran listrik, pembatasan-pembatasan pemerintah, perubahan politik dan atau ekonomi yang drastis dan sebagainya. Dengan demikian, segala kelambatan atau kegagalan tidak dianggap sebagai kesalahan <b>PARA PIHAK</b>, sehingga pihak yang tidak dapat atau terlambat memenuhi kewajibannya, disebabkan hal tersebut di atas tidak dapat dikenakan sanksi atau denda.</p>
+        <p style="padding-left: 0.5cm;">8.2. Jika keadaan tersebut di atas terjadi dan menimpa salah satu atau kedua belah pihak, maka salah satu atau kedua belah pihak wajib memberikan penjelasan selambat-lambatnya 5 (lima) hari kerja setelah peristiwa terjadi.</p>
+        <p style="padding-left: 0.5cm;">8.3. Force majeure sebagaimana dimaksud dalam pasal ini tidak menghapuskan Perjanjian, dan berdasarkan kesiapan kondisi <b>PARA PIHAK</b> dapat melangsungkan Perjanjian sebagaimana mestinya.</p>
+    </ul>
+    <ul style="padding-left: 0.5cm;">
+        <h4 class="code" align="center"><strong>PASAL 9</strong></h4>
+        <h4 class="code" align="center"><strong>SANKSI</strong></h4>
+        <p style="padding-left: 0.5cm;">9.1 Apabila terjadi wanprestasi atas pelaksanaan kewajiban dan pemenuhan hak <b>PARA
+            PIHAK</b> maka pihak yang dirugikan atas tindakan pihak tersangkut berhak menuntut
+            ganti rugi sebesar kerugian yang diderita.</p>
+        <p style="padding-left: 0.5cm;">9.2. Apabila <b>PARA PIHAK</b> tidak dapat memenuhi Perjanjian ini dalam perihal menunaikan
+            kewajibannya terlepas dari Force Majeure, maka <b>PARA PIHAK</b> dapat mengusulkan pembatalan terhadap perjanjian tanpa perihal campur tangan Pengadilan Negeri setempat (Kantor Pengadilan Negeri Jakarta Selatan) dan dalam hal demikian, <b>PARA PIHAK</b> melepas ketentuan-ketentuan tersebut sesuai dengan Pasal 1265 Kitab Undang-Undang Hukum Perdata. Dengan demikian, pembatalan harus didasarkan pada kesepakatan PARA PIHAK dengan Surat Tercatat yang dibuktikan dengan tanda penerimaannya yang dikeluarkan oleh kantor pos.</p>
+    </ul>
+    <ul style="padding-left: 0.5cm;">
+        <h4 class="code" align="center"><strong>PASAL 10</strong></h4>
+        <h4 class="code" align="center"><strong>PENYELESAIAN SENGKETA</strong></h4>
+        <p style="padding-left: 0.5cm;">10.1 Apabila perselisihan dan ketidaksepahaman terjadi antara kedua belah pihak, maka permasalahan akan diselesaikan melalui jalur musyawarah untuk mufakat dan dengan penuh itikad baik.</p>
+        <p style="padding-left: 0.5cm;">10.2 Dalam hal penyelesaian secara musyawarah tidak mencapai mufakat maka <b>PARA PIHAK</b> sepakat untuk menempuh upaya hukum sejauh mana diperlukan dengan mengambil tempat kedudukan di Kantor Pengadilan Jakarta Selatan.</p>
+    </ul>
+    <ul style="padding-left: 0.5cm;">
+        <h4 class="code" align="center"><strong>PASAL 11</strong></h4>
+        <h4 class="code" align="center"><strong>KORESPONDENSI</strong></h4>
+        <p style="padding-left: 0.5cm;">11.1. Semua surat menyurat atau pemberitahuan-pemberitahuan yang dikirim kepada Para Pihak dalam Perjanjian ini dapat dilakukan melalui email, jasa pos atau melalui ekspedisi (kurir) dengan menggunakan alamat sebagaimana tersebut di bawah ini</p>
+        <p style="padding-left: 0.8cm;"><b>PIHAK PERTAMA</b> : <b>PT. Haloka Grup Indonesia</b></p>
+        <p style="padding-left: 0.8cm;">Nama / Jabatan : Stephanie Regina / Direktur</p>
+        <p style="padding-left: 0.8cm;"><b>PIHAK KEDUA</b> : <b>{{client.company_name}}</b></p>
+        <p style="padding-left: 0.8cm;">Nama / Jabatan : PIC</p>
+    </ul>
+    <ul style="padding-left: 0.5cm;">
+        <h4 class="code" align="center"><strong>PASAL 12</strong></h4>
+        <h4 class="code" align="center"><strong>PERUBAHAN</strong></h4>
+        <p style="padding-left: 0.5cm;">12.1. Perjanjian ini tidak dapat diubah, dimodifikasi dan atau ditambah, baik untuk
+            seluruhnya maupun untuk sebagian, kecuali apabila perubahan, modifikasi dan atau penambahan tersebut dibuat dalam suatu perjanjian tertulis yang ditandatangani oleh Para Pihak, dengan tetap memperhatikan peraturan perundangan yang berlaku.</p>
+        <p style="padding-left: 0.5cm;">12.2 Untuk Perubahan atau Adendum tersebut merupakan bagian yang tidak terpisahkan dari Perjanjian ini.</p>
+    </ul>
+  </div>
+  <br><br><br>
+  <table class="signature">
+      <thead>
+        <tr>
+          <th class="signature" style="width: 50%;">Disetujui oleh PIHAK PERTAMA,</th>
+          <th class="signature" style="width: 50%;">Disetujui oleh PIHAK KEDUA,</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="space-sign">
+          <td class="space-sign"></td>
+          <td class="space-sign"></td>
+        </tr>
+        <tr>
+            <td class="signature"><hr class="line"></td>
+            <td class="signature"><hr class="line"></td>
+        </tr>
+        <tr>
+          <td class="signature">Name PIC</td>
+          <td class="signature">Stephanie Regina</td>
+        </tr>
+        <tr>
+          <td class="name">{{agreement.client.company_name}}</td>
+          <td class="name">PT Haloka Grup Indonesia</td>
+        </tr>
+      </tbody>
+    </table>
+</body>
+</html>

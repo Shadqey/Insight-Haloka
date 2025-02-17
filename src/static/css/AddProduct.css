@@ -1,0 +1,20 @@
+h1 {
+    justify-self: left;
+    margin-bottom: 0px;
+    /* color: #F19820; */
+    line-height: 70px;
+    text-align: center;
+    font-size: 35px;
+}
+
+h2{
+    color: #fff;
+}
+
+.label {
+    text-align: left;
+    color: black;
+    font-size: 20px;
+    margin: 7px 0px;
+    /* padding: 0; */
+}

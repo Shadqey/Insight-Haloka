@@ -1,0 +1,30 @@
+#loginPage {
+    padding-top: 0px;
+    height: 100vh;
+}
+
+.login{
+    width: 300px;
+    padding: 20px;
+    height: min-content;
+    border-radius: 5px;
+    background-color: #F19820;
+    box-shadow: 1rem;
+    color: white;
+    box-shadow: 1px 1px 5px #666666;
+}
+
+.btn {
+    background-color: #F19820;
+    color: white;
+    border-color: white;
+    border: 2px solid;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #F19820;
+    font-weight:bold;
+    border-color: white;
+    box-shadow: 2px 2px 2px 2px #666666;
+}
